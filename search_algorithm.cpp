@@ -1,5 +1,4 @@
-//INTELLIGENT SYSTEMS - FINAL COMPETITION
-//INTELLIGENT HUMANS GROUP
+//HYPERSONIC SEARCH TREE
 
 #pragma GCC optimize "O3,omit-frame-pointer,inline"
 #include <ios>
