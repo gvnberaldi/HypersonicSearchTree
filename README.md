@@ -8,7 +8,7 @@ The project is implemented entirely in **C++** to ensure high performance and ef
 ## Game Overview
 Hypersonic is a strategic multiplayer game where 2 to 4 players compete on a grid. The game involves placing bombs to destroy boxes, collect items, and eliminate opponents. Players are ranked based on survival and the number of boxes destroyed.
 
-![Game Example](./assets/game_example.png)
+![Game Example](docs/images/game_example.jpg)
 
 ### Key Rules:
 1. The grid consists of floors, walls, and boxes. 
@@ -38,7 +38,7 @@ The game state is a critical component of the agent's decision-making process. I
    - **Parent State**: The state from which the current state was derived.
    - **Child States**: States generated from the current state based on possible actions.
 
-![Game State Visualization](./assets/game_state.png)
+![Game State Visualization](docs/images/game_state.jpg)
 
 ## Hypersonic Search Tree
 The agent uses a **Search Tree** to explore possible game states and determine optimal moves. 
@@ -49,13 +49,15 @@ The agent uses a **Search Tree** to explore possible game states and determine o
 3. **Edges**: Represent the legal moves made by players.
 4. **Levels**: Each level simulates a single round of the game.
 
+![Search Tree Diagram](docs/images/search_tree.jpg)
+
 ### Search Algorithm:
 - The agent employs **Beam Search**:
   1. Expands a fixed number of top states (e.g., 150) at each level based on evaluation metrics.
   2. Simulates 8 levels, representing 8 rounds of the game.
   3. Backtracks from the best state at the deepest level to determine the optimal move.
 
-![Search Tree Diagram](./assets/search_tree.png)
+![Beam Search](docs/images/beam_search.gif)
 
 ## Transition Model
 The **Transition Model** describes how the game state evolves as a result of player actions.
